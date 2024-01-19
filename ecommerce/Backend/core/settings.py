@@ -252,13 +252,12 @@ DJOSER = {
         "http://localhost:8000/google",
         "http://localhost:8000/facebook",
     ],
-    # "SERIALIZERS": {
-    #     "user_create": "apps.user.serializers.UserSerializer",
-    #     "user": "apps.user.serializers.UserSerializer",
-    #     "current_user": "apps.user.serializers.UserSerializer",
-    #     "user_delete": "djoser.serializers.UserDeleteSerializer",
-    #     "password_reset_confirm": "apps.user.serializers.CustomPasswordResetConfirmSerializer",
-    # },
+    "SERIALIZERS": {
+        'user_create': 'apps.user.serializers.UserCreateSerializer',
+        'user': 'apps.user.serializers.UserCreateSerializer',
+        'current_user': 'apps.user.serializers.UserCreateSerializer',
+        'user_delete': 'djoser.serializers.UserDeleteSerializer',
+    },
     "TEMPLATES": {
         "activation": "email/activation.html",
         "confirmation": "email/confirmation.html",
